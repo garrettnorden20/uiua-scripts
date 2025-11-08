@@ -2,7 +2,7 @@
 ~ "utils.ua" ~ FormatDate ReadArg
 
 P       ↚ $$ (\d{_})
-Date    ↚ FormatDate ↘₁♭regex ⊂₆P4P2P2P2P2P2 # cool way to pack things into an array! 
+Date    ↚ FormatDate ↘₁♭regex ⊂₆P4P2P2P2P2P2
 SplitOn ← ⊜□⊸(/↧≡⌟≠)
 
 SplitOn "<>[]" ReadArg 1
