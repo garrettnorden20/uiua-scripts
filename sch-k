@@ -1,0 +1,10 @@
+#!/usr/bin/env uiua
+~ "utils.ua" ~ FormatDate ReadArg
+
+P       ↚ $$ (\d{_})
+Date    ↚ FormatDate ↘₁♭regex ⊂₆P4P2P2P2P2P2 # cool way to pack things into an array! 
+SplitOn ← ⊜□⊸(/↧≡⌟≠)
+
+SplitOn "<>[]" ReadArg 1
+⍚⍣(°$"s_-_"|°$"_!_")
+$"Partition: _, Date: _, UUID: _"⊃(⊢|Date⋅⊡₁|⋅⊣)

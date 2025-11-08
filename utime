@@ -1,0 +1,5 @@
+#!/usr/bin/env uiua
+~ "utils.ua" ~ FormatDate PadDateTime ReadArg
+⍣(⋕ReadArg 1)now
+∩(FormatDate PadDateTime datetime) ⊸+×3600 ⊸timezone
+⊓($"EST: _"|$"UTC: _")
