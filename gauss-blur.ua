@@ -1,7 +1,7 @@
 # currently just makes the duck grey
 LumCoeffs ← [0.299 0.587 0.114]
 ReadIn    ← ⌝img "png" &frab
-SaveOut   ← &fwa⊃(∘|img⊙⋅∘ "png")
+SaveOut   ← &fwa ⊃(∘|img⊙⋅∘ "png")
 
 ReadIn "duck.png"
 ≡₁(⊂⊃(↯[3]/+×LumCoeffs↙₃|↙₋₁)) # make it grey
